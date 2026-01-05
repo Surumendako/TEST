@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial Rounded MT Bold", "Arial", sans-serif;
+  background: linear-gradient(180deg, #06bf0d, #93ff6f);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+.gummy-rain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.top-image-wrapper {
+  position: relative;
+  margin-top: 12px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.top-image {
+  width: 320px;
+}
+
+.slide-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.top-image-wrapper.open .slide-menu {
+  top: 120%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-btn {
+  width: 180px;
+  margin: 6px 0;
+  display: block;
+}
+
+
+.question,
+.keyboard,
+.progress,
+#stageEndArea {
+  position: relative;
+  z-index: 2;
+}
+
+
+.question {
+  margin: 30px auto 20px;
+  background: #ffffff;
+  width: 340px;
+  padding: 26px;
+  border-radius: 30px;
+  box-shadow: 0 10px 0 #00953c;
+}
+
+#jpWord {
+  font-size: 46px;
+  color: #00d74b;
+  margin-bottom: 12px;
+}
+
+#answerReveal {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f8ce00;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+#answerReveal.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#answer {
+  width: 280px;
+  height: 52px;
+  font-size: 28px;
+  border-radius: 999px;
+  border: 3px solid #00ff59;
+  text-align: center;
+  background: #fdfefe;
+}
+
+.keyboard {
+  margin: 26px auto;
+  max-width: 760px;
+}
+
+.key-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.key-row img {
+  width: min(64px, 13vw);
+  margin: 5px;
+  cursor: pointer;
+  filter: drop-shadow(0 5px 0 #ffffff);
+  transition: transform 0.1s;
+}
+
+.key-row img:active {
+  transform: translateY(5px);
+  filter: none;
+}
+
+
+.progress {
+  width: 85%;
+  height: 16px;
+  background: #ffe3f1;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 24px auto;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff7ad9, #ff8c00);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+
+#stageEndArea {
+  display: none;
+  margin: 40px auto 60px;
+}
+
+#stageEndArea img {
+  width: 260px;
+  margin: 16px auto;
+  display: block;
+  cursor: pointer;
+  filter: drop-shadow(0 6px 0 #01a501);
+  transition: transform 0.1s;
+}
+
+#stageEndArea img:active {
+  transform: translateY(6px);
+  filter: none;
+}
+
+
+#judge img {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 180px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+#judge img.show {
+  animation: judgePop 0.8s forwards;
+}
+
+@keyframes judgePop {
+  0%   { opacity: 0; transform: scale(0.3) rotate(-20deg); }
+  50%  { opacity: 1; transform: scale(1.3) rotate(10deg); }
+  100% { opacity: 0; transform: scale(1); }
+}
