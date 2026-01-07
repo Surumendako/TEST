@@ -1,0 +1,215 @@
+@media (max-width: 768px) {
+
+  body {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+
+  .main-logo {
+    margin-bottom: 28px;
+  }
+
+  .main-logo img {
+    width: 260px;
+  }
+
+
+  .center {
+    flex-direction: column;
+    gap: 26px;
+  }
+
+
+  .gummy-btn {
+    padding: 12px 24px;
+    border-radius: 22px;
+  }
+
+  .gummy-btn img {
+    width: 180px;
+  }
+
+
+  .start-btn-area {
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .start-btn img {
+    width: 140px;
+  }
+
+
+  .stage-title {
+    font-size: 22px;
+  }
+
+  .stage-list {
+    grid-template-columns: 1fr;
+    max-height: 65vh;
+    gap: 14px;
+  }
+
+  .stage-btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  .stage-num {
+    font-size: 17px;
+  }
+
+  .stage-desc {
+    font-size: 12px;
+  }
+
+ 
+  .back-button {
+    margin-top: 20px;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .main-logo img {
+    width: 220px;
+  }
+
+  .gummy-btn img {
+    width: 160px;
+  }
+
+  .start-btn img {
+    width: 120px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+
+  body {
+    padding-bottom: 24px;
+  }
+
+
+  .word-wrap {
+    margin-top: 28px;
+    padding: 36px 18px;
+    border-radius: 26px;
+  }
+
+  .word-main {
+    font-size: 46px;
+    letter-spacing: 2px;
+  }
+
+  .word-sub {
+    font-size: 22px;
+  }
+
+  .nav-area {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-btn {
+    min-width: 64px;
+    min-height: 64px;
+    padding: 12px 16px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+
+  .toggle-btn {
+    min-width: 100%;
+    font-size: 18px;
+    padding: 14px 0;
+  }
+
+    .back-area {
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+
+  .back-btn {
+    min-width: 90%;
+    min-height: 64px;
+    font-size: 20px;
+    border-radius: 24px;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+
+  .question {
+    width: 92%;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  #jpWord {
+    font-size: 34px;
+  }
+
+  #answerReveal {
+    font-size: 22px;
+  }
+
+  #answer {
+    width: 90%;
+    height: 46px;
+    font-size: 22px;
+  }
+
+
+  .keyboard {
+    margin: 14px auto 10px;
+    max-width: 100%;
+    padding: 0 6px;
+  }
+
+  .key-row {
+    justify-content: center;
+  }
+
+
+  .key-row img {
+    width: calc(100vw / 10 - 8px);
+    max-width: 42px;
+    margin: 3px;
+  }
+
+  .key-row img:last-child,
+  .key-row img:nth-last-child(2) {
+    width: calc(100vw / 5 - 10px);
+    max-width: 78px;
+  }
+
+  
+  .progress {
+    width: 90%;
+    height: 14px;
+    margin: 18px auto;
+  }
+
+  #stageEndArea img {
+    width: 88%;
+  }
+
+  .top-image {
+    width: 240px;
+  }
+}
