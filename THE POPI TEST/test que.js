@@ -1,4 +1,3 @@
-
 const WORD_DATA = {
   textbook: {
 
@@ -128,7 +127,6 @@ const WORD_DATA = {
       { japanese: "選択", english: "choice" }
     ],
 
-
     stage8: [
       { japanese: "社会", english: "society" },
       { japanese: "経済", english: "economy" },
@@ -171,7 +169,7 @@ const WORD_DATA = {
       { japanese: "議論", english: "discussion" },
       { japanese: "論点", english: "issue" },
       { japanese: "根拠", english: "basis" },
-      { japanese: "反論", english: "counterargument" },
+      { japanese: "反論", english: "counter-argument" },
       { japanese: "合意", english: "agreement" },
       { japanese: "対立", english: "conflict" },
       { japanese: "提案", english: "proposal" },
@@ -217,7 +215,6 @@ const WORD_DATA = {
       { japanese: "消費", english: "consumption" },
       { japanese: "分配", english: "distribution" },
       { japanese: "影響力", english: "impact" }
-
     ],
 
     stage13: [
@@ -257,7 +254,7 @@ const WORD_DATA = {
     ],
 
     stage15: [
-     { japanese: "仮定", english: "assumption" },
+      { japanese: "仮定", english: "assumption" },
       { japanese: "専門", english: "specialty" },
       { japanese: "知識", english: "knowledge" },
       { japanese: "洞察", english: "insight" },
