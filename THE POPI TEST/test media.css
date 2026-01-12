@@ -1,60 +1,84 @@
 
+/* ===============================
+   POPI Mobile Layout Rebuild
+   =============================== */
+
 @media (max-width: 900px) {
 
   body {
     padding: 6px;
-    justify-content: flex-start;
+    height: 100dvh;
+    overflow: hidden;
   }
 
   .word-wrap {
     margin-top: 6px;
-    padding: 16px 14px;
-    border-radius: 20px;
+    padding: 14px 12px;
+    border-radius: 18px;
   }
 
   .word-main {
-    font-size: 38px;
-    letter-spacing: 1px;
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.1;
   }
 
   .word-sub {
-    font-size: 18px;
+    font-size: clamp(14px, 3.5vw, 20px);
+  }
+
+  .question {
+    width: 92%;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  #jpWord {
+    font-size: clamp(22px, 5vw, 32px);
   }
 
   #answer {
-    width: 92%;
+    width: 90%;
     height: 42px;
     font-size: 20px;
-    margin: 8px auto;
+    margin: 6px auto;
   }
 
   .progress {
-    width: 92%;
+    width: 90%;
     height: 10px;
     margin: 8px auto;
   }
 
+  /* --- keyboard area --- */
+
   .keyboard {
+    flex-shrink: 0;
     margin-top: auto;
-    padding-bottom: 6px;
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .key-row {
+    display: flex;
     justify-content: center;
   }
 
   .key-row img {
-    width: calc(100vw / 11);
-    max-width: 52px;
-    margin: 3px;
+    width: 9vw;
+    max-width: 48px;
+    min-width: 28px;
+    margin: 2px;
   }
 
   .key-row img:last-child,
   .key-row img:nth-last-child(2) {
-    width: calc(100vw / 5.5);
-    max-width: 96px;
+    width: 18vw;
+    max-width: 90px;
   }
 }
+
+/* ===============================
+   Landscape Mode (横画面)
+   =============================== */
 
 @media (max-width: 900px) and (orientation: landscape) {
 
@@ -66,11 +90,12 @@
 
   .word-wrap {
     grid-row: 1;
+    padding: 10px;
   }
 
-  .question,
-  #answer {
+  .question {
     grid-row: 2;
+    padding: 10px;
   }
 
   .keyboard {
@@ -82,21 +107,26 @@
   }
 
   .word-main {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   .word-sub {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  #jpWord {
+    font-size: 22px;
   }
 
   .key-row img {
-    width: calc(100vw / 13);
-    max-width: 46px;
+    width: 7vw;
+    max-width: 44px;
+    min-width: 26px;
   }
 
   .key-row img:last-child,
   .key-row img:nth-last-child(2) {
-    width: calc(100vw / 6.5);
-    max-width: 88px;
+    width: 14vw;
+    max-width: 80px;
   }
 }
