@@ -1,132 +1,274 @@
 
-/* ===============================
-   POPI Mobile Layout Rebuild
-   =============================== */
-
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
   body {
-    padding: 6px;
-    height: 100dvh;
-    overflow: hidden;
+    justify-content: flex-start;
+    padding-top: 20px;
   }
 
+
+  .main-logo {
+    margin-bottom: 28px;
+  }
+
+  .main-logo img {
+    width: 260px;
+  }
+
+
+  .center {
+    flex-direction: column;
+    gap: 26px;
+  }
+
+
+  .gummy-btn {
+    padding: 12px 24px;
+    border-radius: 22px;
+  }
+
+  .gummy-btn img {
+    width: 180px;
+  }
+
+
+  .start-btn-area {
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .start-btn img {
+    width: 140px;
+  }
+
+
+  .stage-title {
+    font-size: 22px;
+  }
+
+  .stage-list {
+    grid-template-columns: 1fr;
+    max-height: 65vh;
+    gap: 14px;
+  }
+
+  .stage-btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  .stage-num {
+    font-size: 17px;
+  }
+
+  .stage-desc {
+    font-size: 12px;
+  }
+
+ 
+  .back-button {
+    margin-top: 20px;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .main-logo img {
+    width: 220px;
+  }
+
+  .gummy-btn img {
+    width: 160px;
+  }
+
+  .start-btn img {
+    width: 120px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+
+  body {
+    padding-bottom: 24px;
+  }
+
+
   .word-wrap {
-    margin-top: 6px;
-    padding: 14px 12px;
-    border-radius: 18px;
+    margin-top: 28px;
+    padding: 36px 18px;
+    border-radius: 26px;
   }
 
   .word-main {
-    font-size: clamp(28px, 6vw, 40px);
-    line-height: 1.1;
+    font-size: 46px;
+    letter-spacing: 2px;
   }
 
   .word-sub {
-    font-size: clamp(14px, 3.5vw, 20px);
+    font-size: 22px;
   }
+
+  .nav-area {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-btn {
+    min-width: 64px;
+    min-height: 64px;
+    padding: 12px 16px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+
+  .toggle-btn {
+    min-width: 100%;
+    font-size: 18px;
+    padding: 14px 0;
+  }
+
+    .back-area {
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+
+  .back-btn {
+    min-width: 90%;
+    min-height: 64px;
+    font-size: 20px;
+    border-radius: 24px;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+
 
   .question {
     width: 92%;
-    padding: 14px;
-    border-radius: 18px;
+    padding: 20px;
+    border-radius: 24px;
   }
 
   #jpWord {
-    font-size: clamp(22px, 5vw, 32px);
+    font-size: 34px;
+  }
+
+  #answerReveal {
+    font-size: 22px;
   }
 
   #answer {
     width: 90%;
-    height: 42px;
-    font-size: 20px;
-    margin: 6px auto;
+    height: 46px;
+    font-size: 22px;
   }
 
-  .progress {
-    width: 90%;
-    height: 10px;
-    margin: 8px auto;
-  }
-
-  /* --- keyboard area --- */
 
   .keyboard {
-    flex-shrink: 0;
-    margin-top: auto;
-    padding-bottom: env(safe-area-inset-bottom);
+    margin: 14px auto 10px;
+    max-width: 100%;
+    padding: 0 6px;
   }
 
   .key-row {
-    display: flex;
     justify-content: center;
   }
 
+
   .key-row img {
-    width: 9vw;
+    width: calc(100vw / 10 - 8px);
+    max-width: 42px;
+    margin: 3px;
+  }
+
+  .key-row img:last-child,
+  .key-row img:nth-last-child(2) {
+    width: calc(100vw / 5 - 10px);
+    max-width: 78px;
+  }
+
+  
+  .progress {
+    width: 90%;
+    height: 14px;
+    margin: 18px auto;
+  }
+
+  #stageEndArea img {
+    width: 88%;
+  }
+
+  .top-image {
+    width: 240px;
+  }
+} 
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+  body {
+    padding: 6px;
+  }
+
+  .word-wrap {
+    margin-top: 8px;
+    padding: 16px 20px;
+  }
+
+  .word-main {
+    font-size: 38px;
+  }
+
+  .word-sub {
+    font-size: 18px;
+  }
+
+  .question {
+    padding: 14px;
+  }
+
+  #jpWord {
+    font-size: 30px;
+  }
+
+  #answer {
+    height: 40px;
+    font-size: 20px;
+  }
+
+  
+  .keyboard {
+    margin: 6px auto 4px;
+    padding: 0;
+  }
+
+  .key-row img {
+    width: calc(100vh / 10);
     max-width: 48px;
-    min-width: 28px;
     margin: 2px;
   }
 
   .key-row img:last-child,
   .key-row img:nth-last-child(2) {
-    width: 18vw;
+    width: calc(100vh / 5);
     max-width: 90px;
   }
-}
 
-/* ===============================
-   Landscape Mode (横画面)
-   =============================== */
-
-@media (max-width: 900px) and (orientation: landscape) {
-
-  body {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    row-gap: 4px;
-  }
-
-  .word-wrap {
-    grid-row: 1;
-    padding: 10px;
-  }
-
-  .question {
-    grid-row: 2;
-    padding: 10px;
-  }
-
-  .keyboard {
-    grid-row: 3;
-  }
-
+  
   .progress {
-    grid-row: 4;
-  }
-
-  .word-main {
-    font-size: 26px;
-  }
-
-  .word-sub {
-    font-size: 14px;
-  }
-
-  #jpWord {
-    font-size: 22px;
-  }
-
-  .key-row img {
-    width: 7vw;
-    max-width: 44px;
-    min-width: 26px;
-  }
-
-  .key-row img:last-child,
-  .key-row img:nth-last-child(2) {
-    width: 14vw;
-    max-width: 80px;
+    height: 10px;
+    margin: 10px auto;
   }
 }
+
